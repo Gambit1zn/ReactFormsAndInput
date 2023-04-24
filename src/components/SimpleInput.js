@@ -10,7 +10,7 @@ const SimpleInput = (props) => {
 
   const enteredNameIsValid = enteredName.trim() !== "";
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
-  const emailInputIsValid = !enteredEmailIsValid && enteredEmailTouched;
+  const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
   let formIsValid = false;
 
@@ -78,7 +78,7 @@ const SimpleInput = (props) => {
           onChange={emailInputChangeHandler}
           onBlur={emailInputBlurHandler}
         />
-        {emailInputIsValid && (
+        {emailInputIsInvalid && (
           <p className="error-text">Email must be a valid email</p>
         )}
       </div>
