@@ -3,7 +3,7 @@ import { useState } from "react";
 const useInput = (validateValue) => {
   const [enteredValue, setEnteredValue] = useState("");
   const [isTouched, setIsTouched] = useState(false);
-
+  debugger;
   const valueIsValid = validateValue(enteredValue);
   const hasError = !valueIsValid && isTouched;
 
@@ -12,6 +12,7 @@ const useInput = (validateValue) => {
   };
 
   const inputBlurHandler = () => {
+    debugger;
     setIsTouched(true);
   };
 
